@@ -1,12 +1,15 @@
 # 2
-name, age = str(input()), int(input())
-if age <= 0 or age is str:
-    print('Ошибка, повторите ввод')
-elif age > 0 and age < 10:
-    print('Привет, шкет', name)
-elif 11 <= age <= 18:
-    print('Как жизнь', name, end='?')
-elif age > 18 and age < 100:
-    print('Что желаете', name, end='?')
+name, age = str(input()), input()
+if age.isdigit() is True:
+    if int(age) <= 0:
+        print('Ошибка, повторите ввод')
+    elif int(age) > 0 and int(age) < 10:
+        print('Привет, шкет', name)
+    elif 11 <= int(age) <= 18:
+        print('Как жизнь', name, end='?')
+    elif int(age) > 18 and int(age) < 100:
+        print('Что желаете', name, end='?')
+    else:
+        print(name, ' вы лжете - в наше время столько не живут...', sep=',')
 else:
-    print(name, ' вы лжете - в наше время столько не живут...', sep=',')
+    print('Ошибка, повторите ввод')
